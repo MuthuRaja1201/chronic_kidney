@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronic Kidney Disease Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center; /* Centers the image */
+        }
+        img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="templates/kidney.jpg" alt="Kidney Disease Prediction">
+    <h2>Kidney Disease Prediction</h2>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="sg">Specific Gravity (sg):</label>
+                <input type="number" step="0.01" name="sg" required>
+            </div>
+            <div class="form-group">
+                <label for="htn">Hypertension (htn):</label>
+                <input type="number" step="0.01" name="htn" required>
+            </div>
+            <div class="form-group">
+                <label for="hemo">Hemoglobin (hemo):</label>
+                <input type="number" step="0.01" name="hemo" required>
+            </div>
+            <div class="form-group">
+                <label for="dm">Diabetes Mellitus (dm):</label>
+                <input type="number" step="0.01" name="dm" required>
+            </div>
+            <div class="form-group">
+                <label for="al">Albumin (al):</label>
+                <input type="number" step="0.01" name="al" required>
+            </div>
+            <div class="form-group">
+                <label for="appet">Appetite (appet):</label>
+                <input type="number" step="0.01" name="appet" required>
+            </div>
+            <div class="form-group">
+                <label for="rc">Red Blood Cell Count (rc):</label>
+                <input type="number" step="0.01" name="rc" required>
+            </div>
+            <div class="form-group">
+                <label for="pc">Pus Cell (pc):</label>
+                <input type="number" step="0.01" name="pc" required>
+            </div>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
